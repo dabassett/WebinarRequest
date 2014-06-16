@@ -1,0 +1,38 @@
+#page {
+  width: 50rem;
+  margin: 0 auto;
+
+  >#header {
+    >#logo {
+      margin: 2.5rem 0 2rem 1.3rem;
+      text-shadow:  2px 0px $background, 4px 1px $fade-tertiary;
+
+      >a {
+        font: 6.25rem/4rem 'Cookie', serif;
+        text-decoration: none;
+        color: $primary;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  >#content {
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+
+    >#menu {
+      float:right;
+
+      >.button {
+        margin-left: .2rem;
+      }
+    }
+  }
+
+  >#footer {
+    min-height: 5rem;
+  }
+}

@@ -1,0 +1,44 @@
+// display settings for the admin panel
+
+.review-accordion {
+  .right-header {
+    width: 15rem;
+    float:right;
+  }
+
+  em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  a {
+    color:  $secondary;
+    &:hover { color: $light-secondary; }
+  }
+
+  .fields {
+    width: 50%;
+    float: left;
+  }
+
+  .description {
+    width: 50%;
+    float: right;
+  }
+
+  ul.links {
+    clear: both;
+    float: right;
+    text-decoration: none;
+
+    .ui-button-text { font-size: 0.7rem; }
+
+    li {
+      display: inline-block;
+
+      a {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

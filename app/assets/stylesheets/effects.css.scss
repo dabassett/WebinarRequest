@@ -1,0 +1,47 @@
+// functions and various portable snippets
+
+// adds corner drop shadows
+.lifted {
+  position:relative;
+  padding:1rem;
+  background:#fcfcfc;
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2);
+  -o-box-shadow: 0px 0px 1px 1px  rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 1px 1px  rgba(0,0,0,0.2);
+}
+
+.lifted:before, .lifted:after {
+
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -ms-transform: skew(-3deg,-2deg);
+  -webkit-transform: skew(-3deg,-2deg); /* Safari and Chrome */
+  -o-transform: skew(-3deg,-2deg); /* Opera */
+  -moz-transform: skew(-3deg,-2deg); /* Firefox */
+  bottom: 14px;
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
+  height: 50px;
+  left: 1px;
+  max-width: 50%;
+  width: 50%;
+}
+.lifted:after {
+
+  -ms-transform: skew(3deg,2deg); /* IE 9 */
+  -webkit-transform: skew(3deg,2deg); /* Safari and Chrome */
+  -o-transform: skew(3deg,2deg); /* Opera */
+  -moz-transform: skew(3deg,2deg); /* Firefox */
+  left: auto;
+  right: 1px;
+}
+
+// draw a nice colored circle in the backgroung
+@mixin circle($diameter, $color) {
+  width: $diameter;
+  height: $diameter;
+  background: $color;
+  -moz-border-radius: $diameter/2;
+  -webkit-border-radius: $diameter/2;
+  border-radius: $diameter/2;
+}

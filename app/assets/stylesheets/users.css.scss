@@ -1,0 +1,37 @@
+$bt-width: 70%;
+$bt-columns: 3;
+$bt-column-width: 95% / $bt-columns;
+
+.boring-table {
+
+  .row {
+    width: $bt-width;
+    padding: 10px 0 10px 10px;
+
+    >span {
+      display: inline-block;
+      width: $bt-column-width;
+    }
+
+    >.links {
+      margin-left: 2rem;
+      display: inline-block;
+
+      a { margin-left: 0.6rem; }
+      .ui-button-text { font-size: 0.7rem; }
+    }
+  }
+
+  .header {
+    @extend .row;
+    >span {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  .shaded {
+    background-color: $light-primary;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,20 @@
+- if @requests.empty?
+  h2 You don't have any requests to display : (
+
+- else
+  .boring-requests-table
+    .header
+      span Name
+      span Date
+
+      - shading_toggle = true
+      - @requests.each do |request|
+        div id=request.id class="#{shading_toggle ? 'row shaded': 'row'}"
+          span = request.name
+          span = request.display_datetime
+          .links
+           span = link_to 'Show', request_path(request), class: 'show'
+           span = link_to 'Edit', edit_request_path(request), class: 'edit'
+           span = link_to 'Delete', request, data: {confirm: 'Are you sure?'}, :method => :delete, class: 'delete'
+        - shading_toggle = !shading_toggle
+br

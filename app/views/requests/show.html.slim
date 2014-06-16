@@ -1,0 +1,51 @@
+h1 Webinar Request ##{@request.id}
+
+p#notice = notice
+
+p
+  strong> Event Name:
+  = @request.name
+
+p
+  strong> Description:
+  = @request.description
+
+p
+  strong> Requester:
+  = @request.requester
+
+p
+  strong> Requester email:
+  = mail_to @request.requester_email
+
+- unless @request.url.blank?
+  p
+    strong> URL:
+    = link_to truncate(@request.url), @request.url
+
+p
+  strong> Date and Time:
+  = @request.display_datetime
+
+p
+  strong Cost: $
+  = @request.cost
+
+- unless @request.sponsor.blank?
+  p
+    strong> Sponsor:
+    = @request.sponsor
+
+- if @request.discount?
+  p
+    strong> Discount Holder:
+    = @request.discount_owner
+
+p
+  strong> Status:
+  = 'Awaiting review' if @request.status == 'unreviewed'
+  = 'Approved' if @request.status == 'approved'
+  = 'Denied' if @request.status == 'denied'
+
+- if user_has_matching_attribute?(:mail, @request.requester_email) || user_in_group?(:admin) || user_in_group?(:lec)
+  = link_to 'Edit', edit_request_path(@request), class: 'button edit'

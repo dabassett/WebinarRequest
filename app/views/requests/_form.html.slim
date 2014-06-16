@@ -1,0 +1,66 @@
+.request-form
+  = form_for(@request) do |f|
+    - if @request.errors.any?
+      #error_explanation
+        h2 #{pluralize(@request.errors.count, 'error')} prohibited this webinar from being saved:
+
+        ul
+          - @request.errors.full_messages.each do |msg|
+            li = msg
+
+    #long-fields
+      .field
+        = f.label :name, 'Event name'
+        = f.text_field :name
+
+      .field
+        = f.label :description
+        = f.text_area :description
+
+      .field
+        = f.label :url, 'URL (if any)'
+        = f.text_field :url
+
+    #right-form
+      .field
+        = f.label :date
+        = f.text_field :date, value: @request.date.try(:to_date), class: 'jq-datepicker'
+
+      .field
+        = f.label :start_time
+        = f.time_select :start_time, {minute_step: 5, ampm: true}
+
+      .field
+        = f.label :end_time
+        = f.time_select :end_time, {minute_step: 5, ampm: true}
+
+    .field
+      = f.label :requester, "Requester's name"
+      = f.text_field :requester
+
+    .field
+      = f.label :requester_email, "Requester's email"
+      = f.text_field :requester_email, title: 'Warning: Only the owner of this email account will receive updates and be able edit the request once submitted'
+
+    .field
+      = f.label :sponsor, 'Sponsor (if any)'
+      = f.text_field :sponsor
+
+    .field
+      = f.label :cost, 'Cost $'
+      = f.text_field :cost
+
+    #bottom-form-left
+      .field
+        = f.label :discount, 'Is there a discount?'
+        = f.check_box :discount, id: 'discount-checkbox'
+    
+    #bottom-form-right
+      #discount-owner-field.field
+        = f.label :discount_owner, 'Discount holder'
+        = f.text_field :discount_owner
+
+    br
+
+    .actions
+      = f.submit

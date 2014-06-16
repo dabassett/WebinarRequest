@@ -1,0 +1,59 @@
+.request-form {
+  #right-form {
+    float: right;
+    margin-right: 2.15rem;
+  }
+
+  #bottom-form-right {
+    @extend #right-form;
+  }
+
+  #bottom-form-left {
+    float: left;
+  }
+
+  #long-fields {
+    margin: 2rem 0;
+
+    input, textarea { width: 36rem; }
+    textarea { height: 5rem; }
+  }
+}
+
+$btr-width: 98%;
+$btr-columns: 3;
+$btr-column-width: 95% / $btr-columns;
+
+.boring-requests-table {
+
+  .row {
+    width: $btr-width;
+    padding: 10px 0 10px 10px;
+
+    >span {
+      display: inline-block;
+      width: $btr-column-width;
+    }
+
+    >.links {
+      display: inline-block;
+      margin-left: 2rem;
+
+      a { margin-left: 0.6rem; }
+      .ui-button-text { font-size: 0.7rem; }
+    }
+  }
+
+  .header {
+    @extend .row;
+    >span {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  .shaded {
+    background-color: $light-primary;
+    border-radius: 10px;
+  }
+}

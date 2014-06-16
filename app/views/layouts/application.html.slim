@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Webinar Request
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" =>  true
+    = javascript_include_tag "application", "data-turbolinks-track" =>  true
+    = csrf_meta_tags
+
+  body
+    div#page
+      div#header
+        div#logo = link_to 'Webinar Request', root_path
+
+      div.lifted#content
+        = render partial: 'layouts/menu'
+        br
+        = yield
+
+      div#footer

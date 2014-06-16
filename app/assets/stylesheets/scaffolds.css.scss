@@ -1,0 +1,116 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $background;
+  color: $fonts;
+  font-family: "Roboto", arial, helvetica, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100%;
+}
+
+p, ol, ul, td, div, span {
+  font-size: .9rem
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 1rem 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+a {
+  color: $secondary;
+  text-decoration: none;
+  &:visited {
+    color: $dark_secondary;
+  }
+  &:hover {
+    color: $light-secondary;
+    text-decoration: underline;
+  }
+}
+
+div {
+  &.field { margin-bottom: 0.5rem; }
+  &.actions {}
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+}
+
+#notice {
+  color: green;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.field {
+  label {
+    width: 9rem;
+    display: inline-block;
+    text-align: right;
+    margin-right: 0.3rem;
+  }
+
+  input {
+    width: 12.5rem;
+  }
+}
+
+.actions {
+  clear: both;
+  margin-top: 2rem;
+}
+
+.field_with_errors {
+  //padding: 2px;
+  background-color: red;
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+
+  // fix busted uniform display
+  textarea.uniform {
+    &, &.active {background-color: white;}
+  }
+}
+
+#error_explanation {
+  margin-bottom: 1.25rem;
+
+  h2 {
+    border-radius: 5px;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul {
+    padding-left: 2rem;
+
+    li {
+      font-size: 0.9rem;
+      list-style: square;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// fonts
+//@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700|Cookie); // dev mode
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700|Cookie);  // production
+
+// color schemes, etc
+$background: #ffffc2;
+$primary: #9BCC5C;       // links
+$secondary: #206676;     // details
+$tertiary: #181b35;      // headings and fonts
+$fonts: #555;            // default font colors
+
+$dark-background:  darken($background, 10%);
+$light-background: lighten($background, 10%);
+
+$dark-primary:     darken($primary, 15%);
+$light-primary:    lighten($primary, 20%);
+$fade-primary:     desaturate($primary, 30%);
+
+$dark-secondary:   darken($secondary, 10%);
+$light-secondary:  lighten($secondary, 10%);
+$fade-secondary:   desaturate($secondary, 50%);
+
+$dark-tertiary:    darken($tertiary, 10%);
+$light-tertiary:   lighten($tertiary, 10%);
+$fade-tertiary:    desaturate($tertiary, 50%);

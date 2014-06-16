@@ -1,0 +1,19 @@
+#menu
+  = link_to 'Calendar', calendar_path, class: 'button'
+
+  - if user_in_group?(:admin) || user_in_group?(:lec)
+    = link_to 'Review', admin_review_path, class: 'button'
+
+  - if user_in_group? :admin
+    = link_to 'Users', users_path, class: 'button'
+
+  - if user_has_matching_attribute?(:umbcDepartment, 'Library') || user_in_group?(:admin) || user_in_group?(:lec)
+    = link_to 'New Request', new_request_path, class: 'button'
+    = link_to 'My Requests', my_requests_path, class: 'button'
+
+  - if logged_in?
+    = link_to 'Logout', shibbolite.logout_path, class: 'button'
+  - else
+    = link_to 'Login', shibbolite.login_path, class: 'button'
+
+

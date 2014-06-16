@@ -1,0 +1,67 @@
+// Place all the styles related to the Calendar controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// TODO change px to rem units where applicable
+// TODO properly namespace this stuff
+
+table.calendar {
+  border-collapse: collapse;
+  width: 100%;
+
+  td, th {
+    font-family: 'Lucida Grande', arial, helvetica, sans-serif;
+    font-size: 14px;
+    padding: 6px;
+    border: 1px solid #999;
+  }
+
+  th {
+    background: $dark-background;
+    color: #666;
+    text-align: center;
+    width: 14.2857142857143%;
+  }
+
+  td {
+    background: #fff;
+    color: #666;
+    height: 80px;
+    vertical-align: top;
+    font-size: 16px;
+
+    ul {
+      list-style-type: none;
+      font-size: 10px;
+    }
+  }
+
+  .not-month {
+    background-color: #f0f0f0;
+    color: #999;
+  }
+  .today    {
+    background-color: $dark-background;
+  }
+}
+
+#month {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  a {
+    text-decoration: none;
+    padding: 0 10px;
+    color: #999;
+
+    &:hover {
+      background-color: transparent;
+      color: $light-secondary;
+    }
+  }
+}
+
+ul {
+  font-size: 11px;
+  padding-left: 20px;
+}
