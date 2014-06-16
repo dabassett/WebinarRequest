@@ -1,4 +1,25 @@
 = Webinar Request
 
-In progress...
+== About
+This is a simple rails 4 application that allows users to create
+schedule webinar training sessions, and for administrators to
+approve and deny these applications. It has basic functions for
+a calandar and email notifications, as well as SSO integration
+provided by my gem Shibbolite (requires Shibboleth).
 
+== Use
+This application is specifically tailored to the needs of the UMBC
+Library, and as such I don't anticipate there being much demand to
+use it as-is. It is released under the MIT license, however, and
+you are free to use the code however you like.
+
+== Contributing
+As a live application I don't foresee having much use for unsolicited
+changes from anyone in the community, but if you really
+want to take a whack at it please remember to:
+
+1. Fork the repository
+2. Make sure the tests pass
+3. Write a test for your change and make it pass
+4. Push the changes to your Fork
+5. Submit a pull request
