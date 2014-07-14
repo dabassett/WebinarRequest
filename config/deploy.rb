@@ -4,6 +4,11 @@ lock '3.2.1'
 set :application, 'WebinarRequest'
 set :repo_url, 'git@github.com:dabassett/WebinarRequest.git'
 
+# make rvm and bundler work
+set :rvm_ruby_version, '1.9.3-p429'
+set :default_env, { rvm_bin_path: '~/.rvm/bin' }
+SSHKit.config.command_map[:rake] = "#{fetch(:default_env)[:rvm_bin_path]}/rvm ruby-#{fetch(:rvm_ruby_version)} do bundle exec rake"
+
 # Default value for :scm is :git
 # set :scm, :git
 
