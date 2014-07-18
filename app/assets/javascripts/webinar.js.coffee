@@ -15,6 +15,7 @@ $ ->
 
   # tooltip on request form
   $('#request_requester_email').tooltip()
+  $('#request_cost').tooltip()
 
   # tabs and accordions on the admin page
   $('.tabs').tabs()
