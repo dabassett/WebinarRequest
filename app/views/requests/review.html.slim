@@ -29,9 +29,6 @@ h1 Administration
                   em> URL:
                   = link_to truncate(request.url), request.url
               div
-                em> Created:
-                = request.created_at.strftime("%-D - %-I:%-M %P")
-              div
                 em> Cost:
                 = "$#{request.cost}"
               - if request.discount
@@ -46,6 +43,13 @@ h1 Administration
             .description
               em> Description:
               = request.description
+            - unless request.attendees.blank?
+              .attendees
+                em> Attendees:
+                = request.attendees
+
+            .timestamp
+              = request.display_created_at
 
             ul.links
               - unless request.status == 'approved'

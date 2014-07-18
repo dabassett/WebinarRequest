@@ -66,6 +66,9 @@ describe 'webinar request model' do
     it 'is invalid when description is too long' do
       @webinar.description = 'yoloswag' * 100 # 800 chars, limit is 500
     end
+    it 'is invalid when attendees is too long' do
+      @webinar.attendees = 'yoloswag' * 100 # 800 chars, limit is 500
+    end
     it 'is invalid without a cost' do
       @webinar.cost = nil
     end

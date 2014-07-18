@@ -1,5 +1,5 @@
 class RequestMailer < ActionMailer::Base
-  default from: "lits-notification@umbc.edu",
+  default from: "lits-notifications@umbc.edu",
           cc: Proc.new { User.pluck(:mail).compact }
 
   def confirmation_email(request)

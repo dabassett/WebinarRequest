@@ -6,7 +6,7 @@ class Request < ActiveRecord::Base
 
   validates :requester, :requester_email, :date, :start_time, :end_time, :cost, :description, :name, presence: true
   validates :requester, :requester_email, :sponsor, :discount_owner, :name, :cost, length: { :maximum => 30 }
-  validates :url, :description, length: { :maximum => 500 }
+  validates :url, :description, :attendees, length: { :maximum => 500 }
   validate :date_cannot_be_in_the_past, on: :create
   validate :end_time_cannot_be_before_start_time
 
@@ -69,6 +69,16 @@ class Request < ActiveRecord::Base
   # print a friendly datetime for the event
   def display_datetime
     "#{self.start_time.strftime("%-I:%M%P")} to #{self.end_time.strftime("%-I:%M%P")} on #{self.date.strftime("%b %-d, %Y")}"
+  end
+
+  # friendly created at timestamp
+  def display_created_at
+    self.created_at.strftime("Created %b %-d, %Y at %-I:%-M %P")
+  end
+
+  # a friendly array of attendees
+  def attendees_list
+    self.attendees.split(',').map(&:strip)
   end
 
   def to_s

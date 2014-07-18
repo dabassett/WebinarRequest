@@ -123,6 +123,6 @@ class RequestsController < ApplicationController
     def webinar_request_params
       params.require(:request).permit(:requester, :requester_email, :date, :start_time,
                                       :end_time, :sponsor, :cost, :discount, :discount_owner,
-                                      :description, :url, :name)
+                                      :description, :url, :name, :attendees)
     end
 end

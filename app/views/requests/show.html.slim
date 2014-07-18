@@ -23,6 +23,11 @@ p
     strong> URL:
     = link_to truncate(@request.url), @request.url
 
+- unless @request.attendees.blank?
+  p
+    strong> Attendees:
+    = @request.attendees
+
 p
   strong> Date and Time:
   = @request.display_datetime

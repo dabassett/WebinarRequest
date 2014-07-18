@@ -26,8 +26,19 @@
     float: right;
   }
 
-  ul.links {
+  .attendees {
+    padding: 1rem 0;
     clear: both;
+  }
+
+  .timestamp {
+    float: left;
+    color: #888;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+
+  ul.links {
     float: right;
     text-decoration: none;
 

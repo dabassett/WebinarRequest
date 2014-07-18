@@ -20,6 +20,9 @@
       .field
         = f.label :url, 'URL (if any)'
         = f.text_field :url
+      .field
+        = f.label :attendees, 'Attendees (if any)'
+        = f.text_field :attendees, title: 'Names of committed attendees separated by commas'
 
     #right-form
       .field
