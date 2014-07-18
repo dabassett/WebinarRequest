@@ -39,7 +39,7 @@
 @mixin retina() {
 	@media only screen {
 		@media (min-resolution: 124dpi), (-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 4/3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-			@include use-backgrounds(url($sprite-retina), $sprite-size, url($input-background-retina), url($input-background-focus-retina), $input-background-size);
+			@include use-backgrounds(image-url($sprite-retina), $sprite-size, image-url($input-background-retina), image-url($input-background-focus-retina), $input-background-size);
 		}
 	}
 }
@@ -172,7 +172,7 @@ div#{$class-wrapper} {
 	&#{$class-upload} span#{$class-action},
 	&#{$class-button},
 	&#{$class-button} span {
-		background-image: url($sprite);
+		background-image: image-url($sprite);
 		background-repeat: no-repeat;
 		-webkit-font-smoothing: antialiased;
 	}
@@ -204,7 +204,7 @@ div#{$class-wrapper} {
 }
 
 .highContrastDetect {
-	background: url($input-background) repeat-x 0 0;
+	background: image-url($input-background) repeat-x 0 0;
 	width: 0px;
 	height: 0px;
 }
@@ -215,11 +215,11 @@ div#{$class-wrapper} {
 #{$class-wrapper-element}#{$class-wrapper} select#{$class-multiselect},
 #{$class-wrapper-element}#{$class-wrapper} textarea#{$class-textarea} {
 	padding: $input-padding;
-	background: url($input-background) repeat-x 0 0;
+	background: image-url($input-background) repeat-x 0 0;
 	outline: 0;
 
 	@include whenActive {
-		background: url($input-background-focus) repeat-x 0 0;
+		background: image-url($input-background-focus) repeat-x 0 0;
 	}
 }
 
