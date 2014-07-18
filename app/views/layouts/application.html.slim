@@ -11,9 +11,10 @@ html
       div#header
         div#logo = link_to 'Webinar Request', root_path
 
-      div.lifted#content
+      .lifted#content
         = render partial: 'layouts/menu'
         br
         = yield
 
-      div#footer
+      #footer
+        #legal &copy; 2014 University of Maryland, Baltimore county
