@@ -29,6 +29,9 @@ h1 Administration
                   em> URL:
                   = link_to truncate(request.url), request.url
               div
+                em> Created:
+                = request.created_at.strftime("%-D - %-I:%-M %P")
+              div
                 em> Cost:
                 = "$#{request.cost}"
               - if request.discount
