@@ -11,7 +11,8 @@ Webinar::Application.configure do
 
   config.assets.js_compressor = :uglifier
 
-  config.assets.compile = false
+  # fall back to AP to fix css image loading
+  config.assets.compile = true
 
   config.assets.digest = true
 
