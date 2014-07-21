@@ -1,9 +1,9 @@
 = Webinar Request
 
 == About
-This is a simple rails 4 application that allows users to create
+This is a simple rails 4 application that allows users to
 schedule webinar training sessions, and for administrators to
-approve and deny these applications. It has basic functions for
+approve and deny these sessions. It has basic functions for
 a calandar and email notifications, as well as SSO integration
 provided by my gem Shibbolite (requires Shibboleth).
 
