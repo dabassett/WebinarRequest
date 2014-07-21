@@ -27,6 +27,9 @@ $ ->
   # jquery ui buttons
   $(':submit, a.button, button').button()
 
+  # special formatting for help button
+  $('#help').button().removeClass('ui-corner-all').addClass('rounded')
+
   # fun button icons
   $('.approve').button(
     icons:

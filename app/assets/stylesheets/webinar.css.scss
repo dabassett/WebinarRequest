@@ -19,7 +19,7 @@
   }
 
   >#content {
-    padding: 1rem;
+    padding: 1.2rem;
     background: #fff;
     border-radius: 10px;
 
@@ -28,6 +28,22 @@
 
       >.button {
         margin-left: .2rem;
+      }
+
+      // rounded help button
+      .rounded {
+        -moz-border-radius: 1em;
+        -webkit-border-radius: 1em;
+        border-radius: 1em;
+        width: 31px;
+        height: 31px;
+        margin-left: 1rem;
+
+        >.ui-button-text {
+          font-size: 26px;
+          line-height: 33px;
+          padding: 0;
+        }
       }
     }
   }

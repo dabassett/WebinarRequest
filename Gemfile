@@ -41,11 +41,11 @@ gem 'slim-rails'
 gem 'shibbolite'
 
 # test with rspec because that's what the cool kids are doing
-gem 'rspec-rails', :group => [:test, :development]
+gem 'rspec-rails', '~> 2.14', :group => [:test, :development]
 group :test do
   gem 'debugger'
   gem 'capybara'
-  gem 'guard-rspec'
+  gem 'guard-rspec', '~> 3.1'
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'timecop'

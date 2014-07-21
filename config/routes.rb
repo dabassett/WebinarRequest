@@ -17,4 +17,6 @@ Webinar::Application.routes.draw do
 
   get 'calendar', to: 'calendar#calendar'
 
+  get 'pages/help', as: 'help'
+
 end
