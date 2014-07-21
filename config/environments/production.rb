@@ -26,9 +26,8 @@ Webinar::Application.configure do
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
-  # fall back to AP to fix css image loading
-  config.assets.compile = true
-  config.assets.precompile = ['*.js', '*.css', '*.css.erb']
+  # fix broken assets loading
+  config.assets.compile = false
 
   # Generate digests for assets URLs.
   config.assets.digest = true
