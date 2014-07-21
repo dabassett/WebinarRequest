@@ -32,7 +32,8 @@ table.calendar {
 
     ul {
       list-style-type: none;
-      font-size: 10px;
+      font-size: 0.8rem;
+      padding-left: 20px;
     }
   }
 
@@ -59,9 +60,4 @@ table.calendar {
       color: $light-secondary;
     }
   }
-}
-
-ul {
-  font-size: 11px;
-  padding-left: 20px;
 }
