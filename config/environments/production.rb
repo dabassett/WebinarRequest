@@ -28,6 +28,7 @@ Webinar::Application.configure do
 
   # fall back to AP to fix css image loading
   config.assets.compile = true
+  config.assets.precompile = ['*.js', '*.css', '*.css.erb']
 
   # Generate digests for assets URLs.
   config.assets.digest = true
